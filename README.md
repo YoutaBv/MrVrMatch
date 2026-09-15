@@ -1,29 +1,41 @@
 # MrVrMatch
 
-## Programa de ejemplo en Turbo Pascal
+## Programas de ejemplo en Turbo Pascal
 
-El archivo `calculadora.pas` contiene un programa compatible con **Turbo Pascal 7.0**. Primero muestra el mensaje `Hola mundo`. Después solicita dos números y presenta la suma, la resta, la multiplicación y la división. Cuando el segundo número es cero, el programa informa que la división no está definida y evita realizarla.
+Este repositorio contiene tres programas compatibles con **Turbo Pascal 7.0**:
 
-El código está organizado mediante varios procedimientos:
+| Archivo | Propósito |
+| --- | --- |
+| `hola_mundo.pas` | Muestra el mensaje `Hola mundo`. |
+| `operaciones.pas` | Solicita dos números y muestra la suma, resta, multiplicación y división. |
+| `calculadora.pas` | Integra las operaciones anteriores utilizando varios `PROCEDURE`. |
+
+### Programa modular
+
+`calculadora.pas` está organizado mediante los siguientes procedimientos:
 
 - `MostrarHolaMundo` muestra el saludo inicial.
 - `LeerNumero` solicita y lee cada número.
 - `MostrarResultados` calcula y muestra las cuatro operaciones.
 
-### Compilación
+El programa evita dividir entre cero y muestra un mensaje informativo cuando el segundo número es `0`. Los valores se leen como `Real`, por lo que se aceptan números enteros y decimales.
 
-En Turbo Pascal, abra `calculadora.pas`, seleccione **Compile > Compile** y ejecute el programa con **Run > Run**.
+### Ejecución en Turbo Pascal
 
-Como alternativa, con Free Pascal puede compilarlo desde una terminal:
+Abra el archivo `.pas` en Turbo Pascal, seleccione **Compile > Compile** y después **Run > Run**.
+
+### Ejecución con Free Pascal
+
+Como alternativa, si tiene Free Pascal instalado, compile desde una terminal:
 
 ```text
+fpc hola_mundo.pas
+fpc operaciones.pas
 fpc calculadora.pas
 ```
 
-Luego ejecute el archivo generado:
+Después ejecute el programa que desea probar, por ejemplo:
 
 ```text
 ./calculadora
 ```
-
-El programa utiliza `Real` para aceptar números enteros y decimales.
